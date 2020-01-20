@@ -42,7 +42,7 @@
         /> -->
       </transition>
 
-      <!-- switch between hour and ten-day -->
+      <!-- switch between hourly and ten-day -->
       <transition
       name='fromRight'
       mode='out-in'
