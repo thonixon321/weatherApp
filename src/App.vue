@@ -17,7 +17,7 @@
 
       <button class='searchButton' @click="checkLocation">Search</button>
 
-      <!-- <router-link class='nav hourlyNav' to="/hourly">
+      <router-link class='nav hourlyNav' to="/hourly">
        <active-arrow v-if='hourlyActive'/>
        <span @click="hourlyActivate">Hourly</span>
       </router-link>
@@ -25,21 +25,21 @@
       <router-link class='nav weekNav' to="/ten_day">
         <active-arrow v-if='weekActive'/>
         <span @click="weekActivate">Week</span>
-      </router-link> -->
+      </router-link>
 
       <a href='https://www.google.com/maps' target="_blank" class='maps'>Google Maps</a>
     </div>
-    <!-- currentData after : are in other file, in "" it is in this data in this file -->
+    <!-- currentData after : are in other file, in '' it is in this data in this file -->
     <div class='content'>
       <!-- current conditions stays -->
       <transition
       mode='out-in'
       appear>
-        <!-- <current-conditions
+        <current-conditions
         :cityName="cityName"
         @loadMethod='loaded'
         v-if='initDataLoaded'
-        /> -->
+        />
       </transition>
 
       <!-- switch between hourly and ten-day -->
@@ -47,9 +47,9 @@
       name='fromRight'
       mode='out-in'
       appear>
-        <!-- <router-view :cityName="cityName">
+        <router-view :cityName="cityName">
 
-        </router-view> -->
+        </router-view>
       </transition>
     </div>
   </div>
@@ -60,9 +60,9 @@
 //import {thingOne, thingtwo} from 'blah'
 //always use {} on import of a file that doesn't export 'default'
 import { axiosHandler }  from './mixins/axiosHandler.js'
-// import activeArrow from './components/active-arrow.vue';
-// import currentConditions from './components/current-conditions.vue';
-import currentWeatherStore from '@/store/modules/current.js';
+import activeArrow from './components/active-arrow.vue';
+import currentConditions from './components/current-conditions.vue';
+import currentWeatherStore from '@/store/current.js';
 import { mapActions } from 'vuex';
 import { mapState } from 'vuex';
 
@@ -340,8 +340,8 @@ export default {
 
 
   components: {
-    // currentConditions,
-    // activeArrow
+    currentConditions,
+    activeArrow
   }
 }
 </script>
